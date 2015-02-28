@@ -1,0 +1,423 @@
+﻿<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Karl</Author>
+  <LastAuthor>Karl</LastAuthor>
+  <Created>2015-02-28T14:34:20Z</Created>
+  <Version>15.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>4155</WindowHeight>
+  <WindowWidth>15345</WindowWidth>
+  <WindowTopX>0</WindowTopX>
+  <WindowTopY>0</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#000000"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62" ss:Name="blp_column_header">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Calibri" x:Family="Swiss" ss:Size="11" ss:Color="#FFFFFF"
+    ss:Bold="1"/>
+   <Interior ss:Color="#4F81BD" ss:Pattern="Solid"/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Sheet1">
+  <Table ss:ExpandedColumnCount="7" ss:ExpandedRowCount="41" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultRowHeight="15">
+   <Row>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Description</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Ticker</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Curr Val</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Curr Dt</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Prev Val</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">Prev Dt</Data></Cell>
+    <Cell ss:StyleID="s62"><Data ss:Type="String">%Chg</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R ALLHAMNCAN</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEAHAM</Data></Cell>
+    <Cell><Data ss:Type="Number">3.2109999999999999</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">3.2170000000000001</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-0.19</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R AMERCHEESE</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEAMCH</Data></Cell>
+    <Cell><Data ss:Type="Number">4.944</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">4.7130000000000001</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">4.9000000000000004</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R OTHERPORK</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEAPRK</Data></Cell>
+    <Cell><Data ss:Type="Number">2.9910000000000001</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">3.0190000000000001</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-0.93</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R BACONSLICE</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEBACN</Data></Cell>
+    <Cell><Data ss:Type="Number">5.5890000000000004</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">5.5309999999999997</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">1.05</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R BEEFSTEW</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEBFST</Data></Cell>
+    <Cell><Data ss:Type="Number">5.7119999999999997</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">5.6520000000000001</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">1.06</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R BOLOGNAALL</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEBOLO</Data></Cell>
+    <Cell><Data ss:Type="Number">2.9569999999999999</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">3.0049999999999999</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-1.6</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R BROILERCMP</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEBROL</Data></Cell>
+    <Cell><Data ss:Type="Number">197.84200000000001</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">199.434</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-0.8</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R BUTTERSALT</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEBUTT</Data></Cell>
+    <Cell><Data ss:Type="Number">3.18</Data></Cell>
+    <Cell><Data ss:Type="String">04/12</Data></Cell>
+    <Cell><Data ss:Type="Number">3.359</Data></Cell>
+    <Cell><Data ss:Type="String">03/12</Data></Cell>
+    <Cell><Data ss:Type="Number">-5.33</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R CHICKENBR</Data></Cell>
+    <Cell><Data ss:Type="String">BPCECHBB</Data></Cell>
+    <Cell><Data ss:Type="Number">2.3849999999999998</Data></Cell>
+    <Cell><Data ss:Type="String">10/11</Data></Cell>
+    <Cell><Data ss:Type="Number">2.2000000000000002</Data></Cell>
+    <Cell><Data ss:Type="String">09/11</Data></Cell>
+    <Cell><Data ss:Type="Number">8.41</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R CHICKENBN</Data></Cell>
+    <Cell><Data ss:Type="String">BPCECHBN</Data></Cell>
+    <Cell><Data ss:Type="Number">3.4380000000000002</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">3.4820000000000002</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-1.26</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R CHEDDARCH</Data></Cell>
+    <Cell><Data ss:Type="String">BPCECHED</Data></Cell>
+    <Cell><Data ss:Type="Number">5.4009999999999998</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">5.4379999999999997</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-0.68</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R CHICKENFR</Data></Cell>
+    <Cell><Data ss:Type="String">BPCECHFW</Data></Cell>
+    <Cell><Data ss:Type="Number">1.546</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">1.5409999999999999</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">0.32</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R CHICKENLG</Data></Cell>
+    <Cell><Data ss:Type="String">BPCECHLB</Data></Cell>
+    <Cell><Data ss:Type="Number">1.5840000000000001</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">1.609</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-1.55</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R CHOPCENTER</Data></Cell>
+    <Cell><Data ss:Type="String">BPCECHOP</Data></Cell>
+    <Cell><Data ss:Type="Number">4.1669999999999998</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">4.2610000000000001</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-2.21</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R CHOPSBNLSS</Data></Cell>
+    <Cell><Data ss:Type="String">BPCECHPB</Data></Cell>
+    <Cell><Data ss:Type="Number">4.484</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">4.5339999999999998</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-1.1000000000000001</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R CHUCKROAST</Data></Cell>
+    <Cell><Data ss:Type="String">BPCECHRG</Data></Cell>
+    <Cell><Data ss:Type="Number">5.335</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">5.3680000000000003</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-0.61</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R CHROASTCH</Data></Cell>
+    <Cell><Data ss:Type="String">BPCECHRU</Data></Cell>
+    <Cell><Data ss:Type="Number">5.6239999999999997</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">5.6820000000000004</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-1.02</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R EGGSGRADEA</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEEGGS</Data></Cell>
+    <Cell><Data ss:Type="Number">2.113</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">2.21</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-4.3899999999999997</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R GROUNDBEEF</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEGRBF</Data></Cell>
+    <Cell><Data ss:Type="Number">4.2350000000000003</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">4.1559999999999997</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">1.9</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R GRNDCHUCK</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEGRCH</Data></Cell>
+    <Cell><Data ss:Type="Number">4.375</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">4.2169999999999996</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">3.75</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R HAMRUMP</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEHAMR</Data></Cell>
+    <Cell><Data ss:Type="Number">2.5209999999999999</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">2.3580000000000001</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">6.91</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R HAMSBONLSS</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEHAMS</Data></Cell>
+    <Cell><Data ss:Type="Number">4.4050000000000002</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">4.3460000000000001</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">1.36</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R ICECREAM</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEICEC</Data></Cell>
+    <Cell><Data ss:Type="Number">5.0890000000000004</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">5.0410000000000004</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">0.95</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R LEANGRBEEF</Data></Cell>
+    <Cell><Data ss:Type="String">BPCELGRB</Data></Cell>
+    <Cell><Data ss:Type="Number">6.032</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">6.0780000000000003</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-0.76</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R MILKFRESH</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEMILK</Data></Cell>
+    <Cell><Data ss:Type="Number">3.758</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">3.82</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-1.62</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R PORKCHOPS</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEPKCH</Data></Cell>
+    <Cell><Data ss:Type="Number">3.988</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">4.056</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-1.68</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R RNDROASTUS</Data></Cell>
+    <Cell><Data ss:Type="String">BPCERDRU</Data></Cell>
+    <Cell><Data ss:Type="Number">5.62</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">5.6609999999999996</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-0.72</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R RNDROASTGR</Data></Cell>
+    <Cell><Data ss:Type="String">BPCERRGR</Data></Cell>
+    <Cell><Data ss:Type="Number">5.1779999999999999</Data></Cell>
+    <Cell><Data ss:Type="String">07/14</Data></Cell>
+    <Cell><Data ss:Type="Number">4.3710000000000004</Data></Cell>
+    <Cell><Data ss:Type="String">07/12</Data></Cell>
+    <Cell><Data ss:Type="Number">18.46</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R SHORTRIBS</Data></Cell>
+    <Cell><Data ss:Type="String">BPCESHRB</Data></Cell>
+    <Cell><Data ss:Type="Number">4.6680000000000001</Data></Cell>
+    <Cell><Data ss:Type="String">05/11</Data></Cell>
+    <Cell><Data ss:Type="Number">4.3959999999999999</Data></Cell>
+    <Cell><Data ss:Type="String">04/11</Data></Cell>
+    <Cell><Data ss:Type="Number">6.19</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R SIRLOINSTK</Data></Cell>
+    <Cell><Data ss:Type="String">BPCESIRL</Data></Cell>
+    <Cell><Data ss:Type="Number">5.6790000000000003</Data></Cell>
+    <Cell><Data ss:Type="String">09/13</Data></Cell>
+    <Cell><Data ss:Type="Number">5.7149999999999999</Data></Cell>
+    <Cell><Data ss:Type="String">08/13</Data></Cell>
+    <Cell><Data ss:Type="Number">-0.63</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R STEAKROUND</Data></Cell>
+    <Cell><Data ss:Type="String">BPCESTRD</Data></Cell>
+    <Cell><Data ss:Type="Number">6.0519999999999996</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">6.2610000000000001</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-3.34</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R STEAKRNDGR</Data></Cell>
+    <Cell><Data ss:Type="String">BPCESTRG</Data></Cell>
+    <Cell><Data ss:Type="Number">6.1609999999999996</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">6.1619999999999999</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-0.02</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R STKSIRLOIN</Data></Cell>
+    <Cell><Data ss:Type="String">BPCESTSI</Data></Cell>
+    <Cell><Data ss:Type="Number">8.08</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">8.1470000000000002</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-0.82</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R TURKEYFRZN</Data></Cell>
+    <Cell><Data ss:Type="String">BPCETURK</Data></Cell>
+    <Cell><Data ss:Type="Number">1.4450000000000001</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">1.331</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">8.56</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R UNCOOKBSTK</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEUBFS</Data></Cell>
+    <Cell><Data ss:Type="Number">7.53</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">7.5410000000000004</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-0.15</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R UNCOOKBFRS</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEUCBR</Data></Cell>
+    <Cell><Data ss:Type="Number">5.8380000000000001</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">5.8540000000000001</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-0.27</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R UNCOOKOTBF</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEUCBV</Data></Cell>
+    <Cell><Data ss:Type="Number">4.734</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">4.7569999999999997</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-0.48</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R UNCOOKBEEF</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEUCGB</Data></Cell>
+    <Cell><Data ss:Type="Number">4.6749999999999998</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">4.5979999999999999</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">1.67</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R WHLBROILER</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEWBRC</Data></Cell>
+    <Cell><Data ss:Type="Number">87.95</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">86.087999999999994</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">2.16</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Meat and Dairy R WHLRETAIL</Data></Cell>
+    <Cell><Data ss:Type="String">BPCEWRBS</Data></Cell>
+    <Cell><Data ss:Type="Number">109.893</Data></Cell>
+    <Cell><Data ss:Type="String">01/15</Data></Cell>
+    <Cell><Data ss:Type="Number">113.346</Data></Cell>
+    <Cell><Data ss:Type="String">12/14</Data></Cell>
+    <Cell><Data ss:Type="Number">-3.05</Data></Cell>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Selected/>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>
