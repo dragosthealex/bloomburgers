@@ -1,0 +1,9 @@
+INDEX VERSION 1.126+/home/alexx/projects/bloomburgers/game/.metadata/.plugins/org.eclipse.jdt.core
+3380793360.index
+3927879410.index
+2089348824.index
+4100623062.index
+2558205149.index
+3266701118.index
+1617034770.index
+3532273819.index
