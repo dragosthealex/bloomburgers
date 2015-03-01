@@ -13,16 +13,18 @@ import org.newdawn.slick.state.StateBasedGame;
  */
 public class Player
 {
+    private final StateBasedGame game;
     private final Basket basket;
     private final Chef chef;
     private final Oven oven;
     private int x = 100, y = BloomGame.SIZE - 100;
     
-    public Player(int x, int y)
+    public Player(int x, int y, StateBasedGame game)
     {
         this.basket = new Basket(x+49, y, 50, 50);
-        this.chef = new Chef(x, y, 50, 50);
+        this.chef = new Chef(x, y, 50, 50, game);
         this.oven = new Oven();
+        this.game = game;
     }
     
     public void update(GameContainer container, Score score)

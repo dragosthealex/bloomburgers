@@ -48,6 +48,8 @@ public class BloomGame extends StateBasedGame
         this.score = 0;
         this.addState(new MainMenu());
         this.addState(new Game());
+        this.addState(new GameOver());
+        this.addState(new Pause());
     }
     
     public void updateScore(int score)

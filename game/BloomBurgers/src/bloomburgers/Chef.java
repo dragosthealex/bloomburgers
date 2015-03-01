@@ -9,21 +9,27 @@ import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.Animation;
+import org.newdawn.slick.Color;
+import org.newdawn.slick.state.StateBasedGame;
+import org.newdawn.slick.state.transition.FadeInTransition;
+import org.newdawn.slick.state.transition.FadeOutTransition;
 /**
  *
  * @author alexx
  */
 public class Chef
 {
+    private final StateBasedGame game;
     // The body parts
     private final ChefBody body;
     private final ChefHead head;
     private int hitCount = 0;
     
-    public Chef(int x, int y, int width, int height)
+    public Chef(int x, int y, int width, int height, StateBasedGame game)
     {
         this.body = new ChefBody(x, y, width, height);
         this.head = new ChefHead(x, y-49, width, height);
+        this.game = game;
     }
     
     // Update
@@ -57,7 +63,7 @@ public class Chef
         switch (hitCount)
         {
             case 6:
-                // GAME OVER
+                game.enterState(GameOver.ID, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
             case 5:
                 body.setBloody(true);
             case 3:

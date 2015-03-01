@@ -15,61 +15,65 @@ import org.newdawn.slick.state.transition.FadeInTransition;
 import org.newdawn.slick.state.transition.FadeOutTransition;
 /**
  *
- * @author alexx
+ * @author Kanoshi
  */
-public class Game extends BasicGameState{
-    // The id of this state
-    public static final int ID = 1;
-    
-    private Ingredient test;
-    // The pizza heaven
-    private PizzaHeaven heaven;
-    private Player player;
-    private Score score;
+public class GameOver extends BasicGameState
+{
+    // The game, stored for later use
+    private StateBasedGame game;
+    // The id of the menu
+    public static final int ID = 2;
     
     @Override
     public void init(GameContainer container, StateBasedGame game)
             throws SlickException 
     {
-       heaven = new PizzaHeaven();
-       test = heaven.revelateIngredient();
-       player = new Player(200, BloomGame.SIZE - 150, game);
-       score = new Score();
+        this.game = game;
     }
  
     @Override
     public void render(GameContainer container, StateBasedGame game, Graphics g)
             throws SlickException 
     {
-        // Draw player
-        player.draw();
-        // Draw ingredient
-        test.getSprite().draw((int)test.getX(), (int)test.getY(), 50, 50);
-        // Draw pizza heaven
-        heaven.draw();
-        score.draw(g);
+        g.setColor(Color.white);
+        g.drawString("Game over!", 50, 10);
+
+        g.drawString("1. Play Again", 50, 100);
+        g.drawString("2. High Scores", 50, 120);
+        g.drawString("3. Quit", 50, 140);
+ 
     }
  
     @Override
     public void update(GameContainer container, StateBasedGame game, int delta)
             throws SlickException 
     {
-        if (container.getInput().isKeyDown(Input.KEY_ESCAPE))
-        {
-            game.enterState(Pause.ID, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
-        }
-        
-        if(test != null && !test.update(container, player))
-        {
-            test = heaven.revelateIngredient();
-        }
-        player.update(container, score);
+        // TODO Auto-generated method stub
+ 
     }
  
     @Override
     public int getID() 
     {
         // TODO Auto-generated method stub
-        return 1;
+        return 2;
+    }
+    
+    // The menu logic here
+    public void keyReleased(int key, char c) 
+    {
+        switch(key) {
+            case Input.KEY_1:
+                game.enterState(Game.ID, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
+                break;
+            case Input.KEY_2:
+                // TODO: Implement later
+                break;
+            case Input.KEY_3:
+                System.exit(0);
+                break;
+            default:
+                break;
+        }
     }
 }
