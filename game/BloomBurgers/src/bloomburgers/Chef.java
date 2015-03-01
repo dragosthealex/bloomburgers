@@ -38,4 +38,20 @@ public class Chef
         body.getSprite().draw((int)body.getX(), body.getY(), 50, 50);
         head.getSprite().draw((int)head.getX(), head.getY(), 50, 50);
     }
+    
+    // Return head pos
+    public int getHeadX()
+    {
+        return (int)this.head.getX();
+    }
+    public int getHeadY()
+    {
+        return (int)this.head.getY();
+    }
+    
+    // Hit
+    public void hit()
+    {
+        
+    }
 }

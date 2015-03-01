@@ -32,20 +32,19 @@ public class Game extends BasicGameState{
     {
        heaven = new PizzaHeaven();
        test = heaven.revelateIngredient();
-       player = new Player(200, 500);
+       player = new Player(200, BloomGame.SIZE - 150);
     }
  
     @Override
     public void render(GameContainer container, StateBasedGame game, Graphics g)
             throws SlickException 
     {
-        g.setColor(Color.white);
-        g.drawString("fuck in the ass", 50, 10);
+        // Draw player
         player.draw();
-        if(test != null)
-        {
-            test.getSprite().draw((int)test.getX(), (int)test.getY(), 50, 50);
-        }
+        // Draw ingredient
+        test.getSprite().draw((int)test.getX(), (int)test.getY(), 50, 50);
+        // Draw pizza heaven
+        heaven.draw();
     }
  
     @Override

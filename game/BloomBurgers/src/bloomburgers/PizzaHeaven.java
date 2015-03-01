@@ -34,7 +34,7 @@ public class PizzaHeaven
     {
         try
         {
-            this.image = new Image("res/PizzaHeaven.png");
+            this.image = new Image("res/Foreground.png");
         }
         catch (SlickException e)
         {
@@ -46,7 +46,13 @@ public class PizzaHeaven
     public Ingredient revelateIngredient()
     {
         int index = (int) Math.floor(Math.random()*7);
-        int startX = (int) Math.floor(Math.random()*(BloomGame.SIZE-50));
+        int startX = (int) Math.floor(Math.random()*(BloomGame.SIZE-100));
         return new Ingredient(ingredient[index], startX, 0, 50, 50);
+    }
+    
+    // Draw
+    public void draw()
+    {
+        image.draw(0,0, BloomGame.SIZE, BloomGame.SIZE);
     }
 }

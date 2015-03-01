@@ -29,8 +29,8 @@ public class Basket extends Entity
         // Set the image
         try
         {
-            Image imageLeft = new Image("res/Bowl-Left.png");
-            Image imageRight = new Image("res/Bowl-Right.png");
+            Image imageLeft = new Image("res/Bowl-Left-Layer0.png");
+            Image imageRight = new Image("res/Bowl-Right-Layer0.png");
             this.movementLeft = new Image[]{imageLeft, imageRight};
             this.movementRight = new Image[]{imageRight, imageLeft};
             left = new Animation(movementLeft, duration, false);
@@ -74,6 +74,26 @@ public class Basket extends Entity
     // Add an ingredient
     public void addIngredient(Ingredient ingredient)
     {
-        this.numberOfIngredients ++;
+        numberOfIngredients = (numberOfIngredients == 9)?0:numberOfIngredients+1;
+        
+        try
+        {
+            boolean dir = (sprite == left)?false:true;
+            
+            Image imageLeft = new Image("res/Bowl-Left-Layer"+
+                    numberOfIngredients/2+".png");
+            Image imageRight = new Image("res/Bowl-Right-Layer"+
+                    numberOfIngredients/2+".png");
+            this.movementLeft = new Image[]{imageLeft, imageRight};
+            this.movementRight = new Image[]{imageRight, imageLeft};
+            left = new Animation(movementLeft, duration, false);
+            right = new Animation(movementRight, duration, false);
+            sprite = (dir)?right:left;
+            //sprite.update(BloomGame.DELTA);
+        }
+        catch (SlickException e)
+        {
+            System.err.println(e.getMessage());
+        }
     }
 }
