@@ -13,11 +13,9 @@ import org.newdawn.slick.SlickException;
  *
  * @author alexx
  */
-public class ChefHead extends Entity
+public class ChefHead extends BloodyEntity
 {
-    
-    
-   public ChefHead(int x, int y, int width, int height)
+    public ChefHead(int x, int y, int width, int height)
     {
         this.x = x;
         this.y = y;
@@ -26,21 +24,32 @@ public class ChefHead extends Entity
         
         try
         {
-            Image imageLeft = new Image("res/Head-Left.png");
-            Image imageRight = new Image("res/Head-Right.png");
-            this.movementLeft = new Image[]{imageLeft, imageRight};
-            this.movementRight = new Image[]{imageRight, imageLeft};
-            left = new Animation(movementLeft, duration, false);
-            right = new Animation(movementRight, duration, false);
+            normalImageLeft = new Image("res/Head-Left.png");
+            normalImageRight = new Image("res/Head-Right.png");
+            normalMovementLeft = new Image[]{normalImageLeft, normalImageRight};
+            normalMovementRight = new Image[]{normalImageRight, normalImageLeft};
+            normalLeft = new Animation(normalMovementLeft, duration, false);
+            normalRight = new Animation(normalMovementRight, duration, false);
+            
+            bloodyImageLeft = new Image("res/Head-Left-Bloody.png");
+            bloodyImageRight = new Image("res/Head-Right-Bloody.png");
+            bloodyMovementLeft = new Image[]{bloodyImageLeft, bloodyImageRight};
+            bloodyMovementRight = new Image[]{bloodyImageRight, bloodyImageLeft};
+            bloodyLeft = new Animation(bloodyMovementLeft, duration, false);
+            bloodyRight = new Animation(bloodyMovementRight, duration, false);
+            
+            left = normalLeft;
+            right = normalRight;
+            
             sprite = right;
         }
         catch (SlickException e)
         {
             System.err.println(e.getMessage());
         }
-    } 
+    }
    
-   // Update
+    // Update
     public void update(boolean direction)
     {
         int delta = BloomGame.DELTA;

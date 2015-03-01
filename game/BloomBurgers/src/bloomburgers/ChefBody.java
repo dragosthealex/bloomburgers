@@ -13,7 +13,7 @@ import org.newdawn.slick.SlickException;
  *
  * @author alexx
  */
-public class ChefBody extends Entity
+public class ChefBody extends BloodyEntity
 {
     public ChefBody(int x, int y, int width, int height)
     {
@@ -24,12 +24,23 @@ public class ChefBody extends Entity
         
         try
         {
-            Image imageLeft = new Image("res/Body-Left.png");
-            Image imageRight = new Image("res/Body-Right.png");
-            this.movementLeft = new Image[]{imageLeft, imageRight};
-            this.movementRight = new Image[]{imageRight, imageLeft};
-            left = new Animation(movementLeft, duration, false);
-            right = new Animation(movementRight, duration, false);
+            normalImageLeft = new Image("res/Body-Left.png");
+            normalImageRight = new Image("res/Body-Right.png");
+            normalMovementLeft = new Image[]{normalImageLeft, normalImageRight};
+            normalMovementRight = new Image[]{normalImageRight, normalImageLeft};
+            normalLeft = new Animation(normalMovementLeft, duration, false);
+            normalRight = new Animation(normalMovementRight, duration, false);
+            
+            bloodyImageLeft = new Image("res/Body-Left-Bloody.png");
+            bloodyImageRight = new Image("res/Body-Right-Bloody.png");
+            bloodyMovementLeft = new Image[]{bloodyImageLeft, bloodyImageRight};
+            bloodyMovementRight = new Image[]{bloodyImageRight, bloodyImageLeft};
+            bloodyLeft = new Animation(bloodyMovementLeft, duration, false);
+            bloodyRight = new Animation(bloodyMovementRight, duration, false);
+            
+            left = normalLeft;
+            right = normalRight;;
+            
             sprite = right;
         }
         catch (SlickException e)

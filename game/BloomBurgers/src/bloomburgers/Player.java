@@ -13,9 +13,9 @@ import org.newdawn.slick.state.StateBasedGame;
  */
 public class Player
 {
-    private Basket basket;
-    private Chef chef;
-    private Oven oven;
+    private final Basket basket;
+    private final Chef chef;
+    private final Oven oven;
     private int x = 100, y = BloomGame.SIZE - 100;
     
     public Player(int x, int y)
@@ -29,20 +29,25 @@ public class Player
     {
         int delta = BloomGame.DELTA;
         Input input = container.getInput();
-        if(input.isKeyDown(Input.KEY_LEFT) 
-            && (x-delta*0.1+50 >= 0))
+        if(input.isKeyDown(Input.KEY_LEFT))
         {
-            basket.update(false);
-            chef.update(false);
-            x -= delta*0.1;
+            if (x+50-delta*0.1 >= 0)
+            {
+                basket.update(false);
+                chef.update(false);
+                x -= delta*0.1;
+            }
         }
-        else if(input.isKeyDown(Input.KEY_RIGHT)
-            && (x+200+delta*0.1 <= BloomGame.SIZE))
+        else if(input.isKeyDown(Input.KEY_RIGHT))
         {
-            basket.update(true);
-            chef.update(true);
-            x += delta*0.1;
+            if (x+235+delta*0.1 <= BloomGame.SIZE)
+            {
+                basket.update(true);
+                chef.update(true);
+                x += delta*0.1;
+            }
         }
+        
         if(basketInOven() && basket.hasPizzaIngredients()!=null)
         {
             score.update(oven.bakePizza(basket.hasPizzaIngredients()));

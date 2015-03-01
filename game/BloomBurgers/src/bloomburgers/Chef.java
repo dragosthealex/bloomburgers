@@ -18,6 +18,7 @@ public class Chef
     // The body parts
     private final ChefBody body;
     private final ChefHead head;
+    private int hitCount = 0;
     
     public Chef(int x, int y, int width, int height)
     {
@@ -52,6 +53,16 @@ public class Chef
     // Hit
     public void hit()
     {
-        
+        hitCount++;
+        switch (hitCount)
+        {
+            case 6:
+                // GAME OVER
+            case 5:
+                body.setBloody(true);
+            case 3:
+                head.setBloody(true);
+                break;
+        }
     }
 }

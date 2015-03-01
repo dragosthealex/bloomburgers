@@ -98,7 +98,7 @@ public class Basket extends Entity
         
         try
         {
-            boolean dir = (sprite == left)?false:true;
+            boolean dir = (sprite != left);
             
             Image imageLeft = new Image("res/Bowl-Left-Layer"+
                     numberOfIngredients/2+".png");
