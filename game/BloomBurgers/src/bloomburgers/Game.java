@@ -21,11 +21,18 @@ public class Game extends BasicGameState{
     // The id of this state
     public static final int ID = 1;
     
+    private Ingredient test;
+    // The pizza heaven
+    private PizzaHeaven heaven;
+    private Player player;
+    
     @Override
     public void init(GameContainer container, StateBasedGame game)
             throws SlickException 
     {
-       
+       heaven = new PizzaHeaven();
+       test = heaven.revelateIngredient();
+       player = new Player(200, 500);
     }
  
     @Override
@@ -34,14 +41,22 @@ public class Game extends BasicGameState{
     {
         g.setColor(Color.white);
         g.drawString("fuck in the ass", 50, 10);
+        player.draw();
+        if(test != null)
+        {
+            test.getSprite().draw((int)test.getX(), (int)test.getY(), 50, 50);
+        }
     }
  
     @Override
     public void update(GameContainer container, StateBasedGame game, int delta)
             throws SlickException 
     {
-        // TODO Auto-generated method stub
- 
+        if(test != null && !test.update(container, player))
+        {
+            test = heaven.revelateIngredient();
+        }
+        player.update(container);
     }
  
     @Override

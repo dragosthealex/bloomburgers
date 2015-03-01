@@ -11,8 +11,14 @@ package bloomburgers;
  */
 public enum IngredientType 
 {
-    PEPERONNI (0, "pepperoni"),
-    MUSHROOM (1, "mushroom");
+    PEPPERONI (0, "Pepperoni"),
+    MUSHROOM (1, "Mushroom"),
+    PEPPER (2, "Pepper"),
+    TOMATO (3, "Tomato"),
+    PINEAPPLE (4, "Pineapple"),
+    MEATBALL (5, "Meatball"),
+    CHEESE (6, "Cheese"),
+    HAM (7, "Ham");
     
     private final int intType;
     private final String name;
