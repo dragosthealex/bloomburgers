@@ -121,12 +121,12 @@ public class Basket extends Entity
         // Initialise pizza as null obj
         Pizza pizza = null;
                 
-        if(ingredients[IngredientType.CHEESE.getInt()] != 0
-        &&(ingredients[IngredientType.HAM.getInt()] != 0)
-        &&(ingredients[IngredientType.TOMATO.getInt()] != 0)
-        &&(ingredients[IngredientType.PEPPERONI.getInt()] != 0)
-        &&(ingredients[IngredientType.PINEAPPLE.getInt()] != 0)
-        &&(ingredients[IngredientType.MEATBALL.getInt()] != 0))
+        if(ingredients[IngredientType.CHEESE.getInt()] >= 1
+        &&(ingredients[IngredientType.HAM.getInt()] >= 1)
+        &&(ingredients[IngredientType.TOMATO.getInt()] >= 1)
+        &&(ingredients[IngredientType.PEPPERONI.getInt()] >= 1)
+        &&(ingredients[IngredientType.PINEAPPLE.getInt()] >= 1)
+        &&(ingredients[IngredientType.MEATBALL.getInt()] >= 1))
         {
             IngredientType [] pizzaIngredients = {IngredientType.CHEESE,
                                               IngredientType.HAM,
@@ -145,7 +145,7 @@ public class Basket extends Entity
             numberOfIngredients -= 6;
         }
         else if(ingredients[IngredientType.CHEESE.getInt()] >= 4
-        &&(ingredients[IngredientType.MUSHROOM.getInt()] != 0))
+        &&(ingredients[IngredientType.MUSHROOM.getInt()] >= 1))
         {
             IngredientType [] pizzaIngredients = {IngredientType.CHEESE,
                                               IngredientType.MUSHROOM};
@@ -158,12 +158,16 @@ public class Basket extends Entity
             {
                 boolean dir = (sprite != left);
             }
+            catch (Exception e)
+            {
+                
+            }
                 numberOfIngredients -= 5;
         }
-        else if(ingredients[IngredientType.MUSHROOM.getInt()] != 0
-        &&(ingredients[IngredientType.HAM.getInt()] != 0)
-        &&(ingredients[IngredientType.TOMATO.getInt()] != 0)
-        &&(ingredients[IngredientType.PINEAPPLE.getInt()] != 0))
+        else if(ingredients[IngredientType.MUSHROOM.getInt()] >= 1
+        &&(ingredients[IngredientType.HAM.getInt()] >= 1)
+        &&(ingredients[IngredientType.TOMATO.getInt()] >= 1)
+        &&(ingredients[IngredientType.PINEAPPLE.getInt()] >= 1))
         {
             IngredientType [] pizzaIngredients = {IngredientType.TOMATO,
                                               IngredientType.MUSHROOM,
@@ -177,10 +181,10 @@ public class Basket extends Entity
             
             numberOfIngredients -= 4;
         }
-        else if(ingredients[IngredientType.PEPPERONI.getInt()] != 0
-        &&(ingredients[IngredientType.HAM.getInt()] != 0)
-        &&(ingredients[IngredientType.PEPPER.getInt()] != 0)
-        &&(ingredients[IngredientType.MEATBALL.getInt()] != 0))
+        else if(ingredients[IngredientType.PEPPERONI.getInt()] >= 1
+        &&(ingredients[IngredientType.HAM.getInt()] >= 1)
+        &&(ingredients[IngredientType.PEPPER.getInt()] >= 1)
+        &&(ingredients[IngredientType.MEATBALL.getInt()] >= 1))
         {
             IngredientType [] pizzaIngredients = {IngredientType.PEPPERONI,
                                               IngredientType.PEPPER,
@@ -194,9 +198,9 @@ public class Basket extends Entity
             
             numberOfIngredients -= 4;
         }
-        else if(ingredients[IngredientType.CHEESE.getInt()] != 0
-        &&(ingredients[IngredientType.PEPPER.getInt()] != 0)
-        &&(ingredients[IngredientType.PINEAPPLE.getInt()] != 0))
+        else if(ingredients[IngredientType.CHEESE.getInt()] >= 1
+        &&(ingredients[IngredientType.PEPPER.getInt()] >= 1)
+        &&(ingredients[IngredientType.PINEAPPLE.getInt()] >= 1))
         {
             IngredientType [] pizzaIngredients = {IngredientType.CHEESE,
                                               IngredientType.PEPPER,

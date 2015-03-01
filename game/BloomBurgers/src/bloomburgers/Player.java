@@ -91,6 +91,6 @@ public class Player
     // Method to find if the basket has reached the oven
     private boolean basketInOven()
     {
-        return (basket.getX() + 150 >= BloomGame.SIZE);
+        return (basket.getX() + 140 >= BloomGame.SIZE);
     }
 }
