@@ -52,17 +52,22 @@ public class Ingredient extends Entity
     public boolean update(GameContainer container, Player player)
     {
         int delta = BloomGame.DELTA;
+        if(player.hit(this))
+        {
+            this.destroy();
+            return false;
+        }
         if(player.get(this))
         {
             this.destroy();
             return false;
         }
-        if(!((this.y + this.height + delta*0.05) >= BloomGame.SIZE))
+        if(!((this.y + this.height + delta*0.1) >= BloomGame.SIZE))
         {
             System.out.println();
             this.sprite = this.down;
             sprite.update(delta);
-            this.y += delta*0.05;
+            this.y += delta*0.1;
             
             return true;
         }

@@ -58,12 +58,23 @@ public class Player
     // Method to check if ingredient entered the basket
     public boolean get(Ingredient ingredient)
     {
-        System.out.println(ingredient.getY() + " " + ingredient.getX());
         if(ingredient.getY()+25 >= basket.getY()
             && (ingredient.getX() <= basket.getX()+25)
             && (ingredient.getX() >= basket.getX()-25))
         {
             basket.addIngredient(ingredient);
+            return true;
+        }
+        return false;
+    }
+    
+    public boolean hit(Ingredient ingredient)
+    {
+        if(ingredient.getY() + 49 >= chef.getHeadY()
+            && (ingredient.getX() <= chef.getHeadX() + 25)
+            && (ingredient.getX() >= chef.getHeadX() - 25))
+        {
+            chef.hit();
             return true;
         }
         return false;

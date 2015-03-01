@@ -23,9 +23,7 @@ public class BloomGame extends StateBasedGame
     // The speed of the game
     public static final int DELTA = 50;
     // The duration in ms for an animation
-    public static final int [] DURATION = {300,300};
-    // Splashscreen
-    public static final int SPLASHSCREEN = 0;
+    public static final int [] DURATION = {500,500};
     // Main menu
     public static final int MAINMENU     = 0;
     // The game
