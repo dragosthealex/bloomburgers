@@ -75,4 +75,10 @@ public class Ingredient extends Entity
         this.destroy();
         return false;
     }
+    
+    // Get type as int
+    public int getIntType()
+    {
+        return this.type.getInt();
+    }
 }

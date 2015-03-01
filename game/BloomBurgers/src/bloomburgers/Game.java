@@ -25,6 +25,7 @@ public class Game extends BasicGameState{
     // The pizza heaven
     private PizzaHeaven heaven;
     private Player player;
+    private Score score;
     
     @Override
     public void init(GameContainer container, StateBasedGame game)
@@ -33,6 +34,7 @@ public class Game extends BasicGameState{
        heaven = new PizzaHeaven();
        test = heaven.revelateIngredient();
        player = new Player(200, BloomGame.SIZE - 150);
+       score = new Score();
     }
  
     @Override
@@ -45,6 +47,7 @@ public class Game extends BasicGameState{
         test.getSprite().draw((int)test.getX(), (int)test.getY(), 50, 50);
         // Draw pizza heaven
         heaven.draw();
+        score.draw(g);
     }
  
     @Override
@@ -55,7 +58,7 @@ public class Game extends BasicGameState{
         {
             test = heaven.revelateIngredient();
         }
-        player.update(container);
+        player.update(container, score);
     }
  
     @Override

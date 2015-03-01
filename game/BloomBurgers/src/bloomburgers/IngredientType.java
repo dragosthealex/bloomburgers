@@ -33,4 +33,9 @@ public enum IngredientType
     {
         return this.name;
     }
+    
+    int getInt()
+    {
+        return this.intType;
+    }
 }

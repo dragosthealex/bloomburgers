@@ -4,14 +4,9 @@
  * and open the template in the editor.
  */
 package bloomburgers;
-import org.newdawn.slick.AppGameContainer;
-import org.newdawn.slick.BasicGame;
 import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.SlickException;
-import org.newdawn.slick.Image;
-import org.newdawn.slick.Animation;
 import org.newdawn.slick.Input;
+import org.newdawn.slick.state.StateBasedGame;
 /**
  *
  * @author alexx
@@ -20,15 +15,17 @@ public class Player
 {
     private Basket basket;
     private Chef chef;
+    private Oven oven;
     private int x = 100, y = BloomGame.SIZE - 100;
     
     public Player(int x, int y)
     {
         this.basket = new Basket(x+49, y, 50, 50);
         this.chef = new Chef(x, y, 50, 50);
+        this.oven = new Oven();
     }
     
-    public void update(GameContainer container)
+    public void update(GameContainer container, Score score)
     {
         int delta = BloomGame.DELTA;
         Input input = container.getInput();
@@ -45,6 +42,10 @@ public class Player
             basket.update(true);
             chef.update(true);
             x += delta*0.1;
+        }
+        if(basketInOven() && basket.hasPizzaIngredients()!=null)
+        {
+            score.update(oven.bakePizza(basket.hasPizzaIngredients()));
         }
     }
     
@@ -78,5 +79,11 @@ public class Player
             return true;
         }
         return false;
+    }
+    
+    // Method to find if the basket has reached the oven
+    private boolean basketInOven()
+    {
+        return (basket.getX() + 150 >= BloomGame.SIZE);
     }
 }

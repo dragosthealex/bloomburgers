@@ -30,6 +30,8 @@ public class BloomGame extends StateBasedGame
     public static final int GAME         = 1;
     // The size
     public static final int SIZE = BloomBurgers.SIZE;
+    // The score
+    private int score;
     
     
     // The constructor
@@ -43,7 +45,19 @@ public class BloomGame extends StateBasedGame
     {
         // The first state added will be the one that is loaded first, when the application is launched
         //this.addState(new SplashScreen(SPLASHSCREEN));
+        this.score = 0;
         this.addState(new MainMenu());
         this.addState(new Game());
+    }
+    
+    public void updateScore(int score)
+    {
+        this.score += score;
+    }
+    
+    // Get the score
+    public int getScore()
+    {
+        return this.score;
     }
 }
