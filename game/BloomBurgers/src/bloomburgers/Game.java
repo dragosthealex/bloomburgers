@@ -42,6 +42,10 @@ public class Game extends BasicGameState{
     public void render(GameContainer container, StateBasedGame game, Graphics g)
             throws SlickException 
     {
+        // Draw background
+        Image background = new Image("res/Game-Background.png");
+        background.draw(0,0);
+        
         // Draw player
         player.draw();
         // Draw ingredient
