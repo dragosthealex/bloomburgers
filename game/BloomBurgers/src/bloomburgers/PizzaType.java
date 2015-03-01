@@ -10,7 +10,11 @@ package bloomburgers;
  * @author alexx
  */
 public enum PizzaType {
-    CAPRICIOSSA (0);
+    CAPRICIOSSA (0),
+    QFORMAGGI (1),
+    QSTAGIONNI (2),
+    PEPPERONI (3),
+    VEGETARIAN (4);
     
     private int intType;
     
