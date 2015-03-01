@@ -8,8 +8,24 @@ public abstract class FoodData
 {
 	public static void main(String[] args)
 	{
-		Ingredient pizzaDough = Ingredient.PIZZA_DOUGH;
-		System.out.println(pizzaDough.getColor());
-		System.out.println(Ingredient.random());
+		--cacert bloomberg.crt
+		--cert hacklondon_spring_2015_003.crt
+		--key hacklondon_spring_2015_003.key
+		-w POST
+		Url url = new Url("https://http-api.openbloomberg.com/request?ns=blp&service=refdata&type=HistoricalDataRequest");
+		--data @- < examples/json/AverageUSGasPrices.json
+
+
+{
+    "securities": [
+        "3AGSREG Index"
+    ],
+    "fields": [
+        "PX_LAST"
+    ],
+    "startDate": "20150101",
+    "endDate": "20150105",
+    "periodicitySelection": "DAILY"
+}
 	}
 }
