@@ -4,8 +4,6 @@
  * and open the template in the editor.
  */
 package bloomburgers;
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.Animation;
@@ -139,7 +137,7 @@ public class Basket extends Entity
             
             try
             {
-                boolean dir = (sprite == left)?false:true;
+                boolean dir = (sprite != left);
 
                 Image imageLeft = new Image("res/Bowl-Left-Layer"+
                         numberOfIngredients/2+".png");

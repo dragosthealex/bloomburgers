@@ -60,6 +60,7 @@ public class MainMenu extends BasicGameState
     }
     
     // The menu logic here
+    @Override
     public void keyReleased(int key, char c) 
     {
         switch(key) {

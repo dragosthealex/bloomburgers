@@ -35,11 +35,12 @@ public class GameOver extends BasicGameState
     public void render(GameContainer container, StateBasedGame game, Graphics g)
             throws SlickException 
     {
+        game.getState(Game.ID).init(game.getContainer(), game);
         g.setColor(Color.white);
         g.drawString("Game over!", 50, 10);
 
         g.drawString("1. Play Again", 50, 100);
-        g.drawString("2. High Scores", 50, 120);
+        g.drawString("2. Main Menu", 50, 120);
         g.drawString("3. Quit", 50, 140);
  
     }
@@ -60,6 +61,7 @@ public class GameOver extends BasicGameState
     }
     
     // The menu logic here
+    @Override
     public void keyReleased(int key, char c) 
     {
         switch(key) {
@@ -67,7 +69,7 @@ public class GameOver extends BasicGameState
                 game.enterState(Game.ID, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
                 break;
             case Input.KEY_2:
-                // TODO: Implement later
+                game.enterState(MainMenu.ID, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
                 break;
             case Input.KEY_3:
                 System.exit(0);

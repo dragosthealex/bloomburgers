@@ -39,7 +39,7 @@ public class ChefBody extends BloodyEntity
             bloodyRight = new Animation(bloodyMovementRight, duration, false);
             
             left = normalLeft;
-            right = normalRight;;
+            right = normalRight;
             
             sprite = right;
         }

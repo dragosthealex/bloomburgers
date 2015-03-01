@@ -4,16 +4,9 @@
  * and open the template in the editor.
  */
 package bloomburgers;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.state.StateBasedGame;
 import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
 import org.newdawn.slick.SlickException;
-import org.newdawn.slick.Image;
-import org.newdawn.slick.Animation;
-import org.newdawn.slick.Input;
 /**
  *
  * @author alexx
@@ -41,6 +34,7 @@ public class BloomGame extends StateBasedGame
     }
 
     // Initialize your game states (calls init method of each gamestate, and set's the state ID)
+    @Override
     public void initStatesList(GameContainer gc) throws SlickException
     {
         // The first state added will be the one that is loaded first, when the application is launched

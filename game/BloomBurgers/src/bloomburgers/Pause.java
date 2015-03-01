@@ -62,6 +62,7 @@ public class Pause extends BasicGameState
     }
     
     // The menu logic here
+    @Override
     public void keyReleased(int key, char c) 
     {
         switch(key) {
@@ -69,7 +70,17 @@ public class Pause extends BasicGameState
                 game.enterState(Game.ID, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
                 break;
             case Input.KEY_2:
-                game.enterState(MainMenu.ID, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
+                try
+                {
+                    game.getState(Game.ID).init(game.getContainer(), game);
+                    game.enterState(MainMenu.ID, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
+                }
+                catch (Exception ex)
+                {
+                    System.out.println("Could not restart.");
+                    System.err.println(ex.getMessage());
+                    System.exit(1);
+                }
                 break;
             case Input.KEY_3:
                 System.exit(0);
