@@ -15,14 +15,17 @@ import org.newdawn.slick.GameContainer;
 abstract public class Entity 
 {
     // The entity's position
-    protected int x;
-    protected int y;
+    protected float x;
+    protected float y;
+    
+    // The duration for the animation
+    int [] duration = BloomGame.DURATION;
     
     // The entity's image
-    protected Image [] movementLeft;
-    protected Image [] movementRight;
-    protected Image [] movementUp;
-    protected Image [] movementDown;
+    protected Image [] movementLeft = null;
+    protected Image [] movementRight = null;
+    protected Image [] movementUp = null;
+    protected Image [] movementDown = null;
     
     // The entity's sizes
     protected int width;
@@ -36,14 +39,26 @@ abstract public class Entity
     {
         try
         {
-            this.movementDown[0].destroy();
-            this.movementDown[1].destroy();
-            this.movementUp[0].destroy();
-            this.movementUp[1].destroy();
-            this.movementLeft[0].destroy();
-            this.movementLeft[1].destroy();
-            this.movementRight[0].destroy();
-            this.movementRight[1].destroy();
+            if(this.movementDown != null)
+            {
+                this.movementDown[0].destroy();
+                this.movementDown[1].destroy();
+            }
+            if(this.movementUp != null)
+            {
+                this.movementUp[0].destroy();
+                this.movementUp[1].destroy();
+            }
+            if(this.movementLeft != null)
+            {
+                this.movementLeft[0].destroy();
+                this.movementLeft[1].destroy();
+            }
+            if(this.movementRight != null)
+            {
+                this.movementRight[0].destroy();
+                this.movementRight[1].destroy();
+            }
         }
         catch (SlickException e)
         {
@@ -52,13 +67,19 @@ abstract public class Entity
     }
     
     // Get position
-    public int getX()
+    public float getX()
     {
         return this.x;
     }
     
-    public int getY()
+    public float getY()
     {
         return this.y;
+    }
+    
+    // Get sprite
+    public Animation getSprite()
+    {
+        return this.sprite;
     }
 }

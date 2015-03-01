@@ -21,15 +21,17 @@ import org.newdawn.slick.Input;
 public class BloomGame extends StateBasedGame
 {
     // The speed of the game
-    private static final int DELTA = 50;
+    public static final int DELTA = 50;
     // The duration in ms for an animation
-    private static final int DURATION = 300;
+    public static final int [] DURATION = {300,300};
     // Splashscreen
     public static final int SPLASHSCREEN = 0;
     // Main menu
     public static final int MAINMENU     = 0;
     // The game
     public static final int GAME         = 1;
+    // The size
+    public static final int SIZE = BloomBurgers.SIZE;
     
     
     // The constructor

@@ -23,7 +23,7 @@ import java.awt.Color;
 public class BloomBurgers {
 
     // The size of the window
-    private final static int SIZE = 600;
+    public final static int SIZE = 600;
     // The framerate
     public static final int FPS = 60;
     /**

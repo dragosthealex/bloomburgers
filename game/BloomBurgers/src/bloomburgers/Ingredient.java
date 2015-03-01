@@ -23,21 +23,51 @@ public class Ingredient extends Entity
 {
     // The type of the ingredient
     private final IngredientType type;
+    // Retain yourself
     
     // Constructor
-    public Ingredient (IngredientType type)
+    public Ingredient (IngredientType type, int x, int y, int height, int width)
     {
         this.type = type;
+        this.x = x;
+        this.y = y;
+        this.height = height;
+        this.width = width;
+        
         try
         {
             // Set the image
             Image image1 = new Image("res/" + type.getName() + ".png");
             Image image2 = new Image("res/" + type.getName() + ".png");
-            this.movementDown = new Image[]{image1, image2};
+            movementDown = new Image[]{image1, image2};
+            down = new Animation(movementDown, duration, true);
+            sprite = down;
         }
         catch (SlickException e)
         {
             System.err.println(e.getMessage());
         }
+    }
+    
+    public boolean update(GameContainer container, Player player)
+    {
+        int delta = BloomGame.DELTA;
+        if(player.get(this))
+        {
+            this.destroy();
+            return false;
+        }
+        if(!((this.y + this.height + delta*0.05) >= BloomGame.SIZE))
+        {
+            System.out.println();
+            this.sprite = this.down;
+            sprite.update(delta);
+            this.y += delta*0.05;
+            
+            return true;
+        }
+
+        this.destroy();
+        return false;
     }
 }
