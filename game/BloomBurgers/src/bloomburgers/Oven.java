@@ -47,6 +47,18 @@ public class Oven extends Entity
                 case CAPRICIOSSA:
                     score = 20;
                     break;
+                case QFORMAGGI:
+                    score = 20;
+                    break;
+                case QSTAGIONNI:
+                    score = 15;
+                    break;
+                case PEPPERONI:
+                    score = 15;
+                    break;
+                case VEGETARIAN:
+                    score = 10;
+                    break;
                 default:
                     break;
             }

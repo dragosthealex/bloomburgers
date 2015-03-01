@@ -13,6 +13,7 @@ import org.newdawn.slick.Color;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.state.transition.FadeInTransition;
 import org.newdawn.slick.state.transition.FadeOutTransition;
+import org.newdawn.slick.Image;
 /**
  *
  * @author alexx
@@ -47,6 +48,8 @@ public class Game extends BasicGameState{
         test.getSprite().draw((int)test.getX(), (int)test.getY(), 50, 50);
         // Draw pizza heaven
         heaven.draw();
+        Image legend = new Image("res/legend.png");
+        legend.draw(0, BloomGame.SIZE-120);
         score.draw(g);
     }
  

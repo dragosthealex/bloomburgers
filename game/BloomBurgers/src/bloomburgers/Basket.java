@@ -123,39 +123,110 @@ public class Basket extends Entity
                 
         if(ingredients[IngredientType.CHEESE.getInt()] != 0
         &&(ingredients[IngredientType.HAM.getInt()] != 0)
-        &&(ingredients[IngredientType.TOMATO.getInt()] != 0))
+        &&(ingredients[IngredientType.TOMATO.getInt()] != 0)
+        &&(ingredients[IngredientType.PEPPERONI.getInt()] != 0)
+        &&(ingredients[IngredientType.PINEAPPLE.getInt()] != 0)
+        &&(ingredients[IngredientType.MEATBALL.getInt()] != 0))
         {
             IngredientType [] pizzaIngredients = {IngredientType.CHEESE,
                                               IngredientType.HAM,
-                                              IngredientType.TOMATO};
+                                              IngredientType.TOMATO,
+                                              IngredientType.PEPPERONI,
+                                              IngredientType.PINEAPPLE,
+                                              IngredientType.MEATBALL};
             pizza = new Pizza(pizzaIngredients, PizzaType.CAPRICIOSSA);
             ingredients[IngredientType.CHEESE.getInt()]--;
             ingredients[IngredientType.HAM.getInt()]--;
             ingredients[IngredientType.TOMATO.getInt()]--;
+            ingredients[IngredientType.PEPPERONI.getInt()]--;
+            ingredients[IngredientType.PINEAPPLE.getInt()]--;
+            ingredients[IngredientType.MEATBALL.getInt()]--;
             
-            numberOfIngredients -= 3;
+            numberOfIngredients -= 6;
+        }
+        else if(ingredients[IngredientType.CHEESE.getInt()] >= 4
+        &&(ingredients[IngredientType.MUSHROOM.getInt()] != 0))
+        {
+            IngredientType [] pizzaIngredients = {IngredientType.CHEESE,
+                                              IngredientType.MUSHROOM};
+            pizza = new Pizza(pizzaIngredients, PizzaType.QFORMAGGI);
+            ingredients[IngredientType.CHEESE.getInt()] -= 4;
+            ingredients[IngredientType.MUSHROOM.getInt()]--;
             
+
             try
             {
                 boolean dir = (sprite != left);
-
-                Image imageLeft = new Image("res/Bowl-Left-Layer"+
-                        numberOfIngredients/2+".png");
-                Image imageRight = new Image("res/Bowl-Right-Layer"+
-                        numberOfIngredients/2+".png");
-                this.movementLeft = new Image[]{imageLeft, imageRight};
-                this.movementRight = new Image[]{imageRight, imageLeft};
-                left = new Animation(movementLeft, duration, false);
-                right = new Animation(movementRight, duration, false);
-                sprite = (dir)?right:left;
-                //sprite.update(BloomGame.DELTA);
             }
-            catch (SlickException e)
-            {
-                System.err.println(e.getMessage());
-            }
+                numberOfIngredients -= 5;
         }
-        
+        else if(ingredients[IngredientType.MUSHROOM.getInt()] != 0
+        &&(ingredients[IngredientType.HAM.getInt()] != 0)
+        &&(ingredients[IngredientType.TOMATO.getInt()] != 0)
+        &&(ingredients[IngredientType.PINEAPPLE.getInt()] != 0))
+        {
+            IngredientType [] pizzaIngredients = {IngredientType.TOMATO,
+                                              IngredientType.MUSHROOM,
+                                              IngredientType.HAM,
+                                              IngredientType.PINEAPPLE};
+            pizza = new Pizza(pizzaIngredients, PizzaType.QSTAGIONNI);
+            ingredients[IngredientType.MUSHROOM.getInt()]--;
+            ingredients[IngredientType.HAM.getInt()]--;
+            ingredients[IngredientType.PINEAPPLE.getInt()]--;
+            ingredients[IngredientType.TOMATO.getInt()]--;
+            
+            numberOfIngredients -= 4;
+        }
+        else if(ingredients[IngredientType.PEPPERONI.getInt()] != 0
+        &&(ingredients[IngredientType.HAM.getInt()] != 0)
+        &&(ingredients[IngredientType.PEPPER.getInt()] != 0)
+        &&(ingredients[IngredientType.MEATBALL.getInt()] != 0))
+        {
+            IngredientType [] pizzaIngredients = {IngredientType.PEPPERONI,
+                                              IngredientType.PEPPER,
+                                              IngredientType.HAM,
+                                              IngredientType.MEATBALL};
+            pizza = new Pizza(pizzaIngredients, PizzaType.PEPPERONI);
+            ingredients[IngredientType.PEPPERONI.getInt()]--;
+            ingredients[IngredientType.HAM.getInt()]--;
+            ingredients[IngredientType.MEATBALL.getInt()]--;
+            ingredients[IngredientType.PEPPER.getInt()]--;
+            
+            numberOfIngredients -= 4;
+        }
+        else if(ingredients[IngredientType.CHEESE.getInt()] != 0
+        &&(ingredients[IngredientType.PEPPER.getInt()] != 0)
+        &&(ingredients[IngredientType.PINEAPPLE.getInt()] != 0))
+        {
+            IngredientType [] pizzaIngredients = {IngredientType.CHEESE,
+                                              IngredientType.PEPPER,
+                                              IngredientType.PINEAPPLE};
+            pizza = new Pizza(pizzaIngredients, PizzaType.VEGETARIAN);
+            ingredients[IngredientType.PEPPER.getInt()]--;
+            ingredients[IngredientType.CHEESE.getInt()]--;
+            ingredients[IngredientType.PINEAPPLE.getInt()]--;
+            
+            numberOfIngredients -= 3;
+        }
+        try
+        {
+            boolean dir = (sprite == left)?false:true;
+
+            Image imageLeft = new Image("res/Bowl-Left-Layer"+
+                    numberOfIngredients/2+".png");
+            Image imageRight = new Image("res/Bowl-Right-Layer"+
+                    numberOfIngredients/2+".png");
+            this.movementLeft = new Image[]{imageLeft, imageRight};
+            this.movementRight = new Image[]{imageRight, imageLeft};
+            left = new Animation(movementLeft, duration, false);
+            right = new Animation(movementRight, duration, false);
+            sprite = (dir)?right:left;
+            //sprite.update(BloomGame.DELTA);
+        }
+        catch (SlickException e)
+        {
+            System.err.println(e.getMessage());
+        }
         return pizza;
     }
 }
