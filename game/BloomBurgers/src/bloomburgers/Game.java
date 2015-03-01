@@ -26,15 +26,17 @@ public class Game extends BasicGameState{
     private PizzaHeaven heaven;
     private Player player;
     private Score score;
+    private Money money;
     
     @Override
     public void init(GameContainer container, StateBasedGame game)
             throws SlickException 
     {
        heaven = new PizzaHeaven();
-       test = heaven.revelateIngredient();
-       player = new Player(200, BloomGame.SIZE - 150, game);
        score = new Score();
+       money = new Money(4000, game);
+       test = heaven.revelateIngredient(money);
+       player = new Player(200, BloomGame.SIZE - 150, game);
     }
  
     @Override
@@ -48,6 +50,7 @@ public class Game extends BasicGameState{
         // Draw pizza heaven
         heaven.draw();
         score.draw(g);
+        money.draw(g);
     }
  
     @Override
@@ -56,14 +59,14 @@ public class Game extends BasicGameState{
     {
         if (container.getInput().isKeyDown(Input.KEY_ESCAPE))
         {
-            game.enterState(Pause.ID, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
+            game.enterState(Pause.ID);
         }
         
         if(test != null && !test.update(container, player))
         {
-            test = heaven.revelateIngredient();
+            test = heaven.revelateIngredient(money);
         }
-        player.update(container, score);
+        player.update(container, score, money);
     }
  
     @Override

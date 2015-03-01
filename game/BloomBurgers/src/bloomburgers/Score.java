@@ -27,6 +27,6 @@ public class Score
     public void draw(Graphics g)
     {
         g.setColor(Color.black);
-        g.drawString(this.score + "", 10, 10);
+        g.drawString(this.score + "", 10, 5);
     }
 }

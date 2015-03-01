@@ -37,20 +37,19 @@ public class Oven extends Entity
     }
     
     // Make pizza
-    public int bakePizza(Pizza pizza)
-    {      
-        int score = 0;
+    public void bakePizza(Pizza pizza, Score score, Money money)
+    {
         if(pizza != null)
         {
             switch(pizza.getType())
             {
                 case CAPRICIOSSA:
-                    score = 20;
+                    score.update(20);
+                    money.add(2000);
                     break;
                 default:
                     break;
             }
         }
-        return score;
     }
 }

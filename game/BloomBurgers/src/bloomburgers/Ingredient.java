@@ -74,4 +74,10 @@ public class Ingredient extends Entity
     {
         return this.type.getInt();
     }
+    
+    // Get price of ingredient
+    public int getPrice()
+    {
+        return 300;
+    }
 }

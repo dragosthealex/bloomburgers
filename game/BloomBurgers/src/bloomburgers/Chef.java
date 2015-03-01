@@ -58,7 +58,7 @@ public class Chef
         switch (hitCount)
         {
             case 6:
-                game.enterState(GameOver.ID, new FadeOutTransition(Color.black), new FadeInTransition(Color.black));
+                game.enterState(GameOver.ID);
             case 5:
                 body.setBloody(true);
             case 3:

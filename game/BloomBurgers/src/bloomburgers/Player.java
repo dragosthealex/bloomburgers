@@ -27,7 +27,7 @@ public class Player
         this.game = game;
     }
     
-    public void update(GameContainer container, Score score)
+    public void update(GameContainer container, Score score, Money money)
     {
         int delta = BloomGame.DELTA;
         Input input = container.getInput();
@@ -52,7 +52,7 @@ public class Player
         
         if(basketInOven() && basket.hasPizzaIngredients()!=null)
         {
-            score.update(oven.bakePizza(basket.hasPizzaIngredients()));
+            oven.bakePizza(basket.hasPizzaIngredients(), score, money);
         }
     }
     

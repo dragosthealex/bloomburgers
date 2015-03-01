@@ -43,11 +43,13 @@ public class PizzaHeaven
     }
     
     // Generate ingredient
-    public Ingredient revelateIngredient()
+    public Ingredient revelateIngredient(Money money)
     {
         int index = (int) Math.floor(Math.random()*7);
         int startX = (int) Math.floor(Math.random()*(BloomGame.SIZE-100));
-        return new Ingredient(ingredient[index], startX, 0, 50, 50);
+        Ingredient newIngredient = new Ingredient(ingredient[index], startX, 0, 50, 50);
+        money.sub(newIngredient.getPrice());
+        return newIngredient;
     }
     
     // Draw
