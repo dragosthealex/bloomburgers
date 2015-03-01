@@ -48,16 +48,20 @@ public class Oven extends Entity
                     money.add(2000);
                     break;
                 case QFORMAGGI:
-                    score = 20;
+                    score.update(15);
+                    money.add(1500);
                     break;
                 case QSTAGIONNI:
-                    score = 15;
+                    score.update(15);
+                    money.add(1500);
                     break;
                 case PEPPERONI:
-                    score = 15;
+                    score.update(15);
+                    money.add(1500);
                     break;
                 case VEGETARIAN:
-                    score = 10;
+                    score.update(10);
+                    money.add(1000);
                     break;
                 default:
                     break;
